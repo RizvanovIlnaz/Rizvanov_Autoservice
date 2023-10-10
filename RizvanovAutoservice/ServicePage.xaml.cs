@@ -23,6 +23,8 @@ namespace RizvanovAutoservice
         public ServicePage()
         {
             InitializeComponent();
+            var currentServices=Rizvanov_AutoserviceEntities.GetContext().Service.ToList();
+            ServiceListView.ItemsSource = currentServices;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
