@@ -16,13 +16,13 @@ namespace RizvanovAutoservice
     public partial class Rizvanov_AutoserviceEntities : DbContext
     {
         private static Rizvanov_AutoserviceEntities _context;
+
         public static Rizvanov_AutoserviceEntities GetContext()
         {
-            if( _context == null )
+            if(_context == null )
                 _context = new Rizvanov_AutoserviceEntities();
             return _context;
         }
-
         public Rizvanov_AutoserviceEntities()
             : base("name=Rizvanov_AutoserviceEntities")
         {
